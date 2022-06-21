@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a6da967049b3924d8bec414ee1ca7fe, type: 3}
+  m_Name: TestSituation
+  m_EditorClassIdentifier: 
+  eventNameToStart: Start
+  Variables:
+  - Npc: {fileID: 5705400277155567080, guid: 3bc8595cdc6565845a7e0e70613e370e, type: 3}
+    NpcName: Robot
+  - Npc: {fileID: 5705400277155567080, guid: 5c02f8cf641910b4facbf1f1e07f9b3f, type: 3}
+    NpcName: Fake
+  - Npc: {fileID: 5705400277155567080, guid: 758b51c36354cef4f914e5eeaf6c251c, type: 3}
+    NpcName: Teste
