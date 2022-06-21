@@ -20,6 +20,8 @@ public class DialogueEventSystem : MonoBehaviour
         public Transform npcInitialPosition;
         public Transform npcFinalPosition;
     }
+    //controls the speed of the npc movement during animation
+    public float animationMovementSpeed; 
     
     public List<PositionHolder> npcPositionToScreen = new List<PositionHolder>();
 
@@ -41,9 +43,8 @@ public class DialogueEventSystem : MonoBehaviour
     //bool to avoid async func
     private bool _callItOnce;
     //place holders to destroy 
-    private GameObject spawnAHolder;
-    private GameObject spawnBHolder;
-
+    private GameObject[] spawnHolder = {null, null};
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -116,8 +117,7 @@ public class DialogueEventSystem : MonoBehaviour
                 {
                     if (characterName.text == eventQueue.First().Variables[i].Npc.name)
                     {
-                        spawnAHolder = Instantiate(eventQueue.First().Variables[i].Npc, npcPositionToScreen[0].npcInitialPosition);
-                        npcPositionToScreen[0].npc = eventQueue.First().Variables[i].Npc;
+                        SpawnDestroyNpc(i, 0);
                         break;
                     }
                 }
@@ -129,8 +129,7 @@ public class DialogueEventSystem : MonoBehaviour
                 {
                     if (characterName.text == eventQueue.First().Variables[i].Npc.name)
                     {
-                        spawnBHolder = Instantiate(eventQueue.First().Variables[i].Npc, npcPositionToScreen[1].npcInitialPosition);
-                        npcPositionToScreen[1].npc = eventQueue.First().Variables[i].Npc;
+                        SpawnDestroyNpc(i, 1);
                         break;
                     }
                 }
@@ -147,17 +146,11 @@ public class DialogueEventSystem : MonoBehaviour
                         {
                             if (npcPositionToScreen[0].npc.name == _previousSpeaker)
                             {
-                                Destroy(spawnBHolder);
-                                spawnBHolder = Instantiate(eventQueue.First().Variables[i].Npc,
-                                    npcPositionToScreen[1].npcInitialPosition);
-                                npcPositionToScreen[1].npc = eventQueue.First().Variables[i].Npc;
+                                SpawnDestroyNpc(i, 1);
                             }
                             else
                             {
-                                Destroy(spawnAHolder);
-                                spawnAHolder = Instantiate(eventQueue.First().Variables[i].Npc,
-                                    npcPositionToScreen[0].npcInitialPosition);
-                                npcPositionToScreen[0].npc = eventQueue.First().Variables[i].Npc;
+                                SpawnDestroyNpc(i, 0);
                             }
                         }
                     }
@@ -168,13 +161,40 @@ public class DialogueEventSystem : MonoBehaviour
         _previousSpeaker = characterName.text;
     }
 
-    void EndEvent()
+    public void EndEvent()
     {
-        for (int i = 0; i < eventQueue.First().Variables.Count; i++)
-        {
-            Destroy(eventQueue.First().Variables[i].Npc);
-        }
+        Destroy(spawnHolder[0]);
+        Destroy(spawnHolder[1]);
         eventQueue.Remove(eventQueue.First());
+    }
+
+    void SpawnDestroyNpc(int forInt, int leftOrRight)
+    {
+        // 0 is left | 1 is right (Just because spawnAholder
+        if (spawnHolder[leftOrRight] != null)
+        {
+            //MoveNpcAtSpawn(leftOrRight, true);
+            Destroy(spawnHolder[leftOrRight]);
+        }
+        spawnHolder[leftOrRight] = Instantiate(eventQueue.First().Variables[forInt].Npc, npcPositionToScreen[leftOrRight].npcFinalPosition);
+        npcPositionToScreen[leftOrRight].npc = eventQueue.First().Variables[forInt].Npc;
+        //MoveNpcAtSpawn(leftOrRight, false);
+    }
+
+    void MoveNpcAtSpawn(int leftOrRight, bool oldNpc)
+    {
+        //check for old character 
+        if (oldNpc)
+        {
+            spawnHolder[leftOrRight].transform.position = Vector2.Lerp(npcPositionToScreen[leftOrRight].npcFinalPosition.position,
+                npcPositionToScreen[leftOrRight].npcInitialPosition.position, animationMovementSpeed);
+        }
+        else
+        {
+            npcPositionToScreen[leftOrRight].npc.transform.position = Vector2.Lerp(npcPositionToScreen[leftOrRight].npc.transform.position,
+                npcPositionToScreen[leftOrRight].npcFinalPosition.position, animationMovementSpeed * Time.deltaTime); 
+        }
+        
     }
     
 }
