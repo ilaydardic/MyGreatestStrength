@@ -20,9 +20,7 @@ public class DialogueEventSystem : MonoBehaviour
         public Transform npcInitialPosition;
         public Transform npcFinalPosition;
     }
-    //controls the speed of the npc movement during animation
-    public float animationMovementSpeed; 
-    
+
     public List<PositionHolder> npcPositionToScreen = new List<PositionHolder>();
 
     [Tooltip("list of npc, The event order is based on this list [1st event = 1st npc]")] 
@@ -44,13 +42,17 @@ public class DialogueEventSystem : MonoBehaviour
     private bool _callItOnce;
     //place holders to destroy 
     private GameObject[] spawnHolder = {null, null};
-   
+    
+    //jar outlined or not
+    private Renderer _jarRend;
+
     // Start is called before the first frame update
     void Start()
     {
         //Defining stuff
         _dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         MouseOnLemonade = false;
+        _jarRend = lemonadeJar.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -71,19 +73,19 @@ public class DialogueEventSystem : MonoBehaviour
         if (hit == lemonadeJar)
         {
             MouseOnLemonade = true;
-            lemonadeJar.GetComponent<SpriteRenderer>().color = Color.red;
+            _jarRend.material.SetFloat("_OutlineWidth", 5);
             if (Input.GetMouseButtonDown(0) && MouseOnLemonade)
             {
                 LemonadeJarPressed = true;
                 CallForEvent();
-                lemonadeJar.GetComponent<SpriteRenderer>().color = Color.yellow;
+                _jarRend.material.SetFloat("_OutlineWidth", 0);
                 MouseOnLemonade = false;
             }
         }
         else
         {
             MouseOnLemonade = false;
-            lemonadeJar.GetComponent<SpriteRenderer>().color = Color.yellow;
+            _jarRend.material.SetFloat("_OutlineWidth", 0);
         }
         
     }
@@ -173,12 +175,11 @@ public class DialogueEventSystem : MonoBehaviour
         // 0 is left | 1 is right (Just because spawnAholder
         if (spawnHolder[leftOrRight] != null)
         {
-            //MoveNpcAtSpawn(leftOrRight, true);
-            Destroy(spawnHolder[leftOrRight]);
+            MoveNpcAtSpawn(leftOrRight, true);
         }
-        spawnHolder[leftOrRight] = Instantiate(eventQueue.First().Variables[forInt].Npc, npcPositionToScreen[leftOrRight].npcFinalPosition);
+        spawnHolder[leftOrRight] = Instantiate(eventQueue.First().Variables[forInt].Npc, npcPositionToScreen[leftOrRight].npcInitialPosition);
         npcPositionToScreen[leftOrRight].npc = eventQueue.First().Variables[forInt].Npc;
-        //MoveNpcAtSpawn(leftOrRight, false);
+        MoveNpcAtSpawn(leftOrRight, false);
     }
 
     void MoveNpcAtSpawn(int leftOrRight, bool oldNpc)
@@ -186,13 +187,14 @@ public class DialogueEventSystem : MonoBehaviour
         //check for old character 
         if (oldNpc)
         {
-            spawnHolder[leftOrRight].transform.position = Vector2.Lerp(npcPositionToScreen[leftOrRight].npcFinalPosition.position,
-                npcPositionToScreen[leftOrRight].npcInitialPosition.position, animationMovementSpeed);
+            spawnHolder[leftOrRight].GetComponent<NpcScript>().positionToBe =
+                npcPositionToScreen[leftOrRight].npcInitialPosition.transform.position;
+            spawnHolder[leftOrRight].GetComponent<NpcScript>().npcToBeDestroyed = true;
         }
         else
         {
-            npcPositionToScreen[leftOrRight].npc.transform.position = Vector2.Lerp(npcPositionToScreen[leftOrRight].npc.transform.position,
-                npcPositionToScreen[leftOrRight].npcFinalPosition.position, animationMovementSpeed * Time.deltaTime); 
+            spawnHolder[leftOrRight].GetComponent<NpcScript>().positionToBe =
+                npcPositionToScreen[leftOrRight].npcFinalPosition.transform.position;
         }
         
     }
