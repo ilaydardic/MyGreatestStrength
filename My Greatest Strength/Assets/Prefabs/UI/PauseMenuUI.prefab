@@ -672,10 +672,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6721536300521189861, guid: 965889b4d6daf064cb29f507c452a61f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToMainMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 6721536300521189861, guid: 965889b4d6daf064cb29f507c452a61f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Play
       objectReference: {fileID: 0}

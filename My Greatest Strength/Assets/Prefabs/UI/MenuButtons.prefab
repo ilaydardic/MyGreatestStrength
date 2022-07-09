@@ -298,7 +298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8945092627386978901}
-  - component: {fileID: 8945092627386978900}
+  - component: {fileID: 5784922134196379613}
   m_Layer: 0
   m_Name: MenuButtons
   m_TagString: Untagged
@@ -324,7 +324,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8945092627386978900
+--- !u!114 &5784922134196379613
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -333,10 +333,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8945092627386978902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79c9acdff47c78142bbbc2e4269a6bde, type: 3}
+  m_Script: {fileID: 11500000, guid: 11378f4b4fa25f947acfd2af3acef980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SFXSelect: {fileID: 8945092626315506878}
 --- !u!1001 &3243504694002320265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -437,13 +436,9 @@ PrefabInstance:
       value: PlayButton
       objectReference: {fileID: 0}
     - target: {fileID: 2257293677687570095, guid: 79b4aa9c170faa9459be6fad2af81f34, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2257293677687570095, guid: 79b4aa9c170faa9459be6fad2af81f34, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8945092627386978900}
+      objectReference: {fileID: 5784922134196379613}
     - target: {fileID: 2257293677687570095, guid: 79b4aa9c170faa9459be6fad2af81f34, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -469,7 +464,7 @@ PrefabInstance:
     - target: {fileID: 1542690239725225212, guid: 0e1e67abfdfeb6d46ae63526b75ab199, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8945092627386978900}
+      objectReference: {fileID: 5784922134196379613}
     - target: {fileID: 1542690239725225212, guid: 0e1e67abfdfeb6d46ae63526b75ab199, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
