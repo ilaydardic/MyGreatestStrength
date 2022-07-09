@@ -3,15 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class MenuButtons : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(WaitForSound());
+
+        IEnumerator WaitForSound()
+        {
+            yield return new WaitForSeconds(1f);
+
+            SceneManager.LoadScene("BuildScene");
+        }
+    }
+
+    public void GoToMainMenu()
+    {
+        StartCoroutine(WaitForSound());
+
+        IEnumerator WaitForSound()
+        {
+            yield return new WaitForSeconds(1f);
+
+            SceneManager.LoadScene("Menus1Scene");
+        }
     }
 
     public void ExitGame()
     {
-        Application.Quit();
+        StartCoroutine(WaitForSound());
+
+        IEnumerator WaitForSound()
+        {
+            yield return new WaitForSeconds(1f);
+
+            Application.Quit();
+        }
     }
 }
