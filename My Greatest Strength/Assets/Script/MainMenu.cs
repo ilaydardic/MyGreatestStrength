@@ -10,17 +10,30 @@ public class MenuButtons : MonoBehaviour
 
     public void PlayGame()
     {
-        SFXSelect.Play();
+        StartCoroutine(WaitForSound());
 
-        if (!SFXSelect.isPlaying)
+        IEnumerator WaitForSound()
         {
+            SFXSelect.Play();
+
+            yield return new WaitForSeconds(1f);
+
             SceneManager.LoadScene("BuildScene");
         }
     }
 
     public void GoToMainMenu()
     {
-        SceneManager.LoadScene("Menus1Scene");
+        StartCoroutine(WaitForSound());
+
+        IEnumerator WaitForSound()
+        {
+            SFXSelect.Play();
+
+            yield return new WaitForSeconds(1f);
+
+            SceneManager.LoadScene("Menus1Scene");
+        }
     }
 
     public void ExitGame()
