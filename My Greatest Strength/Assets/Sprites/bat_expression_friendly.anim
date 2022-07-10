@@ -51,7 +51,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: bone_1/bone_2/bone_3/bone_4/Bat_expressions/friendly
+    path: friendly
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -88,7 +88,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: bone_1/bone_2/bone_3/bone_4/Bat_expressions/friendly_closed
+    path: friendly_closed
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -100,14 +100,14 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2379363466
+      path: 47062791
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2726238399
+      path: 922729110
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -169,7 +169,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: bone_1/bone_2/bone_3/bone_4/Bat_expressions/friendly
+    path: friendly
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -206,7 +206,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: bone_1/bone_2/bone_3/bone_4/Bat_expressions/friendly_closed
+    path: friendly_closed
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []
