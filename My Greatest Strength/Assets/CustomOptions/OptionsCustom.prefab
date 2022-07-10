@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 445346487965519899}
-  optionViewPrefab: {fileID: 5665317717604146022, guid: 3ff4e0d87ab7d4789a1565ac303e8261, type: 3}
+  optionViewPrefab: {fileID: 5665317717604146022, guid: c79e9c03ba6accc42bce703b1f2d1863, type: 3}
   lastLineText: {fileID: 0}
   fadeTime: 0.1
   showUnavailableOptions: 0

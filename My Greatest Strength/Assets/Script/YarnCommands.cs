@@ -48,7 +48,8 @@ public class YarnCommands : MonoBehaviour
                 choices.Kindness += choiceAmount;
                 break;
             default:
-                throw new Exception("Error, choice does not exist!");
+                Debug.LogWarning("Wrong mood for text background was written!");
+                break;
         }
 
         StartCoroutine(fillCup());
@@ -62,19 +63,23 @@ public class YarnCommands : MonoBehaviour
     [YarnCommand("moodBoard")]
     public void changeMoodBoard(string mood)
     {
-        if (mood == "angry")
+        switch (mood)
         {
-            //textBackground.GetComponent<SpriteRenderer>().sprite = setOfSprites[0];
-            Debug.Log("mood 0");
-        }
-        else if(mood == "happy")
-        {
-            //textBackground.GetComponent<SpriteRenderer>().sprite = setOfSprites[1];
-            Debug.Log("mood 1");
-        }
-        else
-        {
-            Debug.LogWarning("Wrong mood for text background was written!");
+            case "angry":
+                //textBackground.GetComponent<SpriteRenderer>().sprite = setOfSprites[0];
+                Debug.Log("mood 0");
+                break;
+            case "happy":
+                //textBackground.GetComponent<SpriteRenderer>().sprite = setOfSprites[1];
+                Debug.Log("mood 1");
+                break;
+            case "narrator":
+                //textBackground.GetComponent<SpriteRenderer>().sprite = setOfSprites[2];
+                Debug.Log("mood narrator");
+                break;
+            default:
+                Debug.LogWarning("Wrong mood for text background was written!");
+                break;
         }
     }
     
