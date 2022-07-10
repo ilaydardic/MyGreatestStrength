@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Yarn.Unity;
 
     public class OptionsListViews : DialogueViewBase
     {
         [SerializeField] CanvasGroup canvasGroup;
 
-        [SerializeField] OptionView optionViewPrefab;
+        [SerializeField] OptionViews optionViewPrefab;
 
         [SerializeField] TextMeshProUGUI lastLineText;
 
@@ -21,7 +22,7 @@ using Yarn.Unity;
         [SerializeField] private Transform[] CupsChoicePosition;
 
         // A cached pool of OptionView objects so that we can reuse them
-        List<OptionView> optionViews = new List<OptionView>();
+        List<OptionViews> optionViews = new List<OptionViews>();
 
         // The method we should call when an option has been selected.
         Action<int> OnOptionSelected;
@@ -29,11 +30,15 @@ using Yarn.Unity;
         // The line we saw most recently.
         LocalizedLine lastSeenLine;
 
+        private GameObject eventSystem;
+
         public void Start()
         {
             canvasGroup.alpha = 0;
             canvasGroup.interactable = false;
             canvasGroup.blocksRaycasts = false;
+            
+            eventSystem = GameObject.FindWithTag("EventSystem");
         }
 
         public void Reset()
@@ -52,6 +57,7 @@ using Yarn.Unity;
 
         public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
         {
+            eventSystem.GetComponent<YarnCommands>().canBePlayed = true;
             // Hide all existing option views
             foreach (var optionView in optionViews)
             {
@@ -128,7 +134,7 @@ using Yarn.Unity;
             // it to <see cref="optionViews"/>.
             // </summary>
             // new change, accepts transform position*
-            OptionView CreateNewOptionView(Transform position)
+            OptionViews CreateNewOptionView(Transform position)
             {
                 var optionView = Instantiate(optionViewPrefab);
                 optionView.transform.SetParent(position.transform, false);
@@ -136,6 +142,7 @@ using Yarn.Unity;
 
                 optionView.OnOptionSelected = OptionViewWasSelected;
                 optionViews.Add(optionView);
+                
 
                 return optionView;
             }
@@ -145,12 +152,24 @@ using Yarn.Unity;
             /// </summary>
             void OptionViewWasSelected(DialogueOption option)
             {
-                StartCoroutine(OptionViewWasSelectedInternal(option));
-
-                IEnumerator OptionViewWasSelectedInternal(DialogueOption selectedOption)
+                if (!optionViews[0].hasSubmittedOptionSelection && !optionViews[1].hasSubmittedOptionSelection)
                 {
-                    yield return StartCoroutine(Effects.FadeAlpha(canvasGroup, 1, 0, fadeTime));
-                    OnOptionSelected(selectedOption.DialogueOptionID);
+                    StartCoroutine(OptionViewWasSelectedInternal(option));
+                    
+                    IEnumerator OptionViewWasSelectedInternal(DialogueOption selectedOption)
+                    {
+                        if (eventSystem != null && eventSystem.GetComponent<YarnCommands>().canBePlayed)
+                        {
+                            eventSystem.GetComponent<YarnCommands>().canBePlayed = false;
+                            yield return StartCoroutine(eventSystem.GetComponent<YarnCommands>().CupChoices(option.DialogueOptionID));
+                        }
+                        yield return StartCoroutine(Effects.FadeAlpha(canvasGroup, 1, 0, fadeTime));
+                        OnOptionSelected(selectedOption.DialogueOptionID);
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("Option Already Selected");
                 }
             }
         }

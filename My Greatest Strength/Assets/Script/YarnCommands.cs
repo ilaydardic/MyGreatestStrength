@@ -5,6 +5,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 using Yarn.Unity;
 
 public class YarnCommands : MonoBehaviour
@@ -18,11 +19,17 @@ public class YarnCommands : MonoBehaviour
         public string Teamwork;
         public string Kindness;
     }
-
+    
     public Choices choices = new Choices();
 
     public GameObject textBackground;
-    public Sprite[] setOfSprites;
+    public Sprite[] setOfImages;
+
+    public new Camera camera;
+    public GameObject[] liquidAnimation;
+    public GameObject[] valveAnimation;
+
+    public bool canBePlayed;
 
     [YarnCommand("save")]
     public void Save(string choiceName, int choiceAmount)
@@ -66,16 +73,13 @@ public class YarnCommands : MonoBehaviour
         switch (mood)
         {
             case "angry":
-                //textBackground.GetComponent<SpriteRenderer>().sprite = setOfSprites[0];
-                Debug.Log("mood 0");
+                textBackground.GetComponent<Image>().sprite = setOfImages[0];
                 break;
             case "happy":
-                //textBackground.GetComponent<SpriteRenderer>().sprite = setOfSprites[1];
-                Debug.Log("mood 1");
+                textBackground.GetComponent<Image>().sprite = setOfImages[1];
                 break;
             case "narrator":
-                //textBackground.GetComponent<SpriteRenderer>().sprite = setOfSprites[2];
-                Debug.Log("mood narrator");
+                textBackground.GetComponent<Image>().sprite = setOfImages[2];
                 break;
             default:
                 Debug.LogWarning("Wrong mood for text background was written!");
@@ -95,6 +99,25 @@ public class YarnCommands : MonoBehaviour
             string json = JsonUtility.ToJson(choices);
             File.WriteAllText(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/ChoicesScoreboard.txt",  DateTime.Now + " " + json + "\n");
         }
+    }
+
+    public IEnumerator CupChoices(int choiceID)
+    {
+        if (choiceID.Equals(0))
+        {
+            valveAnimation[0].GetComponent<Animation>().Play("Rotate");
+            yield return new WaitForSeconds(valveAnimation[0].GetComponent<Animation>().GetClip("Rotate").length);
+        }
+        else if(choiceID.Equals(1))
+        {
+            valveAnimation[1].GetComponent<Animation>().Play("Rotate");
+            yield return new WaitForSeconds(valveAnimation[1].GetComponent<Animation>().GetClip("Rotate").length);
+        }
+        else
+        {
+            Debug.LogWarning("Error during the choice ID");
+        }
+        
     }
     
 }

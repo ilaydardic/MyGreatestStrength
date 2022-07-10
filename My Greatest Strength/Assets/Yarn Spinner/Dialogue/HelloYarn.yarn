@@ -1,7 +1,9 @@
 title: Start
 ---
 
+
 Robot: Wow!
+    <<disable Robot(Clone)>>
     <<moodBoard EventSystem angry>>
 Teste: My first ever Yarn script in Unity!
     <<moodBoard EventSystem happy>>
@@ -17,6 +19,7 @@ Fake: it's a me!
     <<save EventSystem teamwork 5>>
 -> Incredible!
     <<save EventSystem kindness 999>>
+
 
 Anyway, time to get writing!
 
