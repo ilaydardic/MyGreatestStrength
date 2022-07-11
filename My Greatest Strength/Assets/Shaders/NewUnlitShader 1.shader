@@ -1,4 +1,4 @@
-Shader "Unlit/InnerSpriteOutline HLSL"
+Shader "Unlit/InnerSpriteOutline"
 {
     Properties
     {
