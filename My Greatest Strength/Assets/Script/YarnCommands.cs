@@ -32,6 +32,9 @@ public class YarnCommands : MonoBehaviour
 
     public bool canBePlayed;
 
+    //get length
+    public AnimationClip lemonadeAnimation;
+
     [YarnCommand("save")]
     public void Save(string choiceName, int choiceAmount)
     {
@@ -109,7 +112,7 @@ public class YarnCommands : MonoBehaviour
             soundEffects[0].Play();
 
             valveAnimation[0].GetComponent<Animation>().Play("Rotate");
-            yield return new WaitForSeconds(valveAnimation[0].GetComponent<Animation>().GetClip("Rotate").length);
+            yield return new WaitForSeconds(lemonadeAnimation.length);
 
             soundEffects[1].Play();
         }
@@ -118,7 +121,8 @@ public class YarnCommands : MonoBehaviour
             soundEffects[0].Play();
 
             valveAnimation[1].GetComponent<Animation>().Play("Rotate");
-            yield return new WaitForSeconds(valveAnimation[1].GetComponent<Animation>().GetClip("Rotate").length);
+            //both lemonade animation have the same length duration so should be alright 
+            yield return new WaitForSeconds(lemonadeAnimation.length);
 
             soundEffects[1].Play();
         }

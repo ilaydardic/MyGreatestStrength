@@ -85,6 +85,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6338e1856ada5ae4681c3e3f5516e872, type: 3}
   - {fileID: 21300000, guid: 301ad91e075f21041a5fb4718312547a, type: 3}
   - {fileID: 21300000, guid: 408bc0010ad62a64aa103d4f3154a92e, type: 3}
+  camera: {fileID: 0}
+  liquidAnimation: []
+  valveAnimation: []
+  soundEffects: []
+  canBePlayed: 0
+  lemonadeAnimation: {fileID: 0}
 --- !u!1 &1888992633164038098
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,10 +459,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionsCustom
       objectReference: {fileID: 0}
-    - target: {fileID: 445346487965519898, guid: 9e39ee37299ef9648906896764ea13e7, type: 3}
-      propertyPath: CupsChoicePosition.Array.data[0]
-      value: 
-      objectReference: {fileID: 4323498764556419077}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e39ee37299ef9648906896764ea13e7, type: 3}
 --- !u!114 &4323498764298866569 stripped
@@ -473,11 +475,6 @@ MonoBehaviour:
 --- !u!224 &4323498764298866571 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 445346487965519896, guid: 9e39ee37299ef9648906896764ea13e7, type: 3}
-  m_PrefabInstance: {fileID: 4192314130142125971}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &4323498764556419077 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 445346487707180950, guid: 9e39ee37299ef9648906896764ea13e7, type: 3}
   m_PrefabInstance: {fileID: 4192314130142125971}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8288410816557668876

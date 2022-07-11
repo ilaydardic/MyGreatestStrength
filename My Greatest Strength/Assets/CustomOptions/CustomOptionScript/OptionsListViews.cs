@@ -18,6 +18,9 @@ using Yarn.Unity;
 
         [SerializeField] bool showUnavailableOptions = false;
 
+        //0 - top lemonade juice / 1 - left lemonade juice / 2 - right lemonade juice
+        [SerializeField] GameObject[] lemonadeJuice;
+
         //little change. This should be changed if there's more than 2 choices to choose
         [SerializeField] private Transform[] CupsChoicePosition;
 
@@ -56,7 +59,12 @@ using Yarn.Unity;
         }
 
         public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
-        {
+        { 
+            lemonadeJuice[0].GetComponent<Animator>().Play("lem_top_anim",  -1, 0f);
+
+
+            
+            
             eventSystem.GetComponent<YarnCommands>().canBePlayed = true;
             // Hide all existing option views
             foreach (var optionView in optionViews)
@@ -154,6 +162,7 @@ using Yarn.Unity;
             {
                 if (!optionViews[0].hasSubmittedOptionSelection && !optionViews[1].hasSubmittedOptionSelection)
                 {
+                    
                     StartCoroutine(OptionViewWasSelectedInternal(option));
                     
                     IEnumerator OptionViewWasSelectedInternal(DialogueOption selectedOption)
@@ -161,6 +170,14 @@ using Yarn.Unity;
                         if (eventSystem != null && eventSystem.GetComponent<YarnCommands>().canBePlayed)
                         {
                             eventSystem.GetComponent<YarnCommands>().canBePlayed = false;
+                            if (option.DialogueOptionID == 0)
+                            {
+                                lemonadeJuice[1].GetComponent<Animator>().Play("lem_bot_left_anim",  -1, 0f);
+                            }
+                            else
+                            {
+                                lemonadeJuice[2].GetComponent<Animator>().Play("lem_bot_left_anim",  -1, 0f);
+                            }
                             yield return StartCoroutine(eventSystem.GetComponent<YarnCommands>().CupChoices(option.DialogueOptionID));
                         }
                         yield return StartCoroutine(Effects.FadeAlpha(canvasGroup, 1, 0, fadeTime));

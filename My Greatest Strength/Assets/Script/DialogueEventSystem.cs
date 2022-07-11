@@ -5,6 +5,7 @@ using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 using Yarn;
@@ -46,6 +47,9 @@ public class DialogueEventSystem : MonoBehaviour
     //jar outlined or not
     private Renderer _jarRend;
 
+    public GameObject immortalObject;
+    [SerializeField] private GameObject eventSystem;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,8 +67,13 @@ public class DialogueEventSystem : MonoBehaviour
         {
            CheckForMouseOnJar(); 
         }
+
+        if (eventQueue.Count == 0)
+        {
+            EndGame();
+        }
     }
-    
+
     void CheckForMouseOnJar()
     {
         //Simple raycast, once find the lemonade Jar. do something
@@ -161,8 +170,15 @@ public class DialogueEventSystem : MonoBehaviour
         }
         _callItOnce = false;
         _previousSpeaker = characterName.text;
+        
     }
 
+    void EndGame()
+    {
+        immortalObject.GetComponent<DontDestroyOnLoadScript>().preserveData(eventSystem.GetComponent<YarnCommands>());
+        SceneManager.LoadScene("EndResultScene");
+    }
+    
     public void EndEvent()
     {
         Destroy(spawnHolder[0]);
@@ -179,6 +195,13 @@ public class DialogueEventSystem : MonoBehaviour
         }
         spawnHolder[leftOrRight] = Instantiate(eventQueue.First().Variables[forInt].Npc, npcPositionToScreen[leftOrRight].npcInitialPosition);
         npcPositionToScreen[leftOrRight].npc = eventQueue.First().Variables[forInt].Npc;
+        
+        //if npc is on the right, change scale to -1 so It looks at the right direction
+        if (leftOrRight == 1)
+        {
+            spawnHolder[leftOrRight].transform.localScale = new Vector3(-spawnHolder[leftOrRight].transform.localScale.x, spawnHolder[leftOrRight].transform.localScale.y, spawnHolder[leftOrRight].transform.localScale.z);
+        }
+        
         MoveNpcAtSpawn(leftOrRight, false);
     }
 

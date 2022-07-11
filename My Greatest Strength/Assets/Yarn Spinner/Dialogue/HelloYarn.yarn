@@ -2,13 +2,13 @@ title: Start
 ---
 
 
-Robot: Wow!
-    <<disable Robot(Clone)>>
+Bear: Wow!
+    <<animation Bear(Clone) Positive>>
+    <<expression BearFace Angry>>
     <<moodBoard EventSystem angry>>
 Teste: My first ever Yarn script in Unity!
     <<moodBoard EventSystem happy>>
 Robot: again!
-    <<moodBoard EventSystem testerror>>
 Teste: Hi
 Fake: lol
 Fake: ahaha

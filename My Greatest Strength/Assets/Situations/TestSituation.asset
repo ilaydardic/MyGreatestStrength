@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventNameToStart: Start
   Variables:
-  - Npc: {fileID: 5705400277155567080, guid: 3bc8595cdc6565845a7e0e70613e370e, type: 3}
-    NpcName: Robot
+  - Npc: {fileID: 5243668098147650446, guid: 4b216302943ed0047aae7af392345d1e, type: 3}
+    NpcName: 
   - Npc: {fileID: 5705400277155567080, guid: 5c02f8cf641910b4facbf1f1e07f9b3f, type: 3}
     NpcName: Fake
   - Npc: {fileID: 5705400277155567080, guid: 758b51c36354cef4f914e5eeaf6c251c, type: 3}
