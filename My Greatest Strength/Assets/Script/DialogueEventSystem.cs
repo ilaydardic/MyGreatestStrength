@@ -134,7 +134,7 @@ public class DialogueEventSystem : MonoBehaviour
                 }
             }
             //npc on previous holder but not this one. Spawn it
-            else if(npcPositionToScreen[1].npc == null)
+            else if(npcPositionToScreen[1].npc == null && npcPositionToScreen[0].npc.name != characterName.text)
             {
                 for(int i = 0; i < eventQueue.First().Variables.Count; i++)
                 {
