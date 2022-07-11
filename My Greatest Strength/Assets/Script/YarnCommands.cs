@@ -28,6 +28,7 @@ public class YarnCommands : MonoBehaviour
     public new Camera camera;
     public GameObject[] liquidAnimation;
     public GameObject[] valveAnimation;
+    public AudioSource[] soundEffects;
 
     public bool canBePlayed;
 
@@ -105,13 +106,21 @@ public class YarnCommands : MonoBehaviour
     {
         if (choiceID.Equals(0))
         {
+            soundEffects[0].Play();
+
             valveAnimation[0].GetComponent<Animation>().Play("Rotate");
             yield return new WaitForSeconds(valveAnimation[0].GetComponent<Animation>().GetClip("Rotate").length);
+
+            soundEffects[1].Play();
         }
         else if(choiceID.Equals(1))
         {
+            soundEffects[0].Play();
+
             valveAnimation[1].GetComponent<Animation>().Play("Rotate");
             yield return new WaitForSeconds(valveAnimation[1].GetComponent<Animation>().GetClip("Rotate").length);
+
+            soundEffects[1].Play();
         }
         else
         {
