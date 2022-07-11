@@ -1,0 +1,32 @@
+title: Sit_OtherHelp_TvC_42
+tags: 
+colorID: 0
+position: 425,472
+---
+//Customer who need other help
+As you were taking a break, a biker accidentally hit your stand and made a hole in it.
+The customers run for your help and said they can fix it today.
+-> Accept help and offer free lemonade
+    <<save EventSystem teamwork 10>>
+    << moodBoard EventSystem happy>>
+    <<animation Owl(Clone) Positive>>
+    <<expression OwlFace Happy>>
+    Owl:  We can fix this together. That´s not a problem.
+    Player: Thank you so much! I can help as well.
+    Owl: Yeah, we all can do it. Stone Golem can also help. He can carry heavy things!
+    Player: Yes! And I can make lemonades.
+    Player: I´m going to check on the Biker now.
+    That is super duper! Everyone wants to help you fix it! Teamwork, hurray!!
+-> Rush to the Biker and see what happened
+    <<save EventSystem curiosity 10>>
+    << moodBoard EventSystem angry>>
+    Player: Are you okay?!
+    Biker: Y-yes.. I´m sorry. I don´t know what happened.
+    Player: That´s okay. I can fix it. Did you get hurt?
+    Biker: Nothing serious. Hurts a little bit.
+    Player: Do you want me to call a doctor?
+    << moodBoard EventSystem happy>>
+    Biker: No no! Thank you!
+    Player: Okay. Here have a lemonade!
+    Good thing you checked on the biker. Something serious could have happened.
+===

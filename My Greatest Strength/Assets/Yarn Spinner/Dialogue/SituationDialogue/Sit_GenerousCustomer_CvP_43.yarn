@@ -1,0 +1,59 @@
+title: Sit_GenerousCustomer_CvP_43
+tags: 
+colorID: 0
+position: -376,387
+---
+    //Generous Customer
+The Tree comes to your stand.
+    <<animation Tree(Clone) Positive>>
+    <<expression TreeFace Happy>>
+Tree: I really like your lemonades and wanted to ask if you can bring some to my party.
+-> Ask what kind of party
+    <<save Eventsystem curiosity 10>>
+    <<moodBoard EventSystem happy>>
+    Player: That´s so fun! For what is the party
+    Tree: For my..
+    <<animation Tree(Clone) Negative>>
+    <<expression TreeFace Serious>>
+    Tree: EHm..
+    Tree: three..
+    Tree: four..
+    <<animation Tree(Clone) Positive>>
+    <<expression TreeFace Happy>>
+    Tree: four..thousand year birthday party.
+    Player: four! Wooow! You are soo big already!
+    Player: Yes, I can make some lemonade for your birthday.
+    Player: I will make the beeest and fresh lemonade for you special day!
+    The Tree is four thousand years old? He looks muuch younger! Happy birthday Tree!
+-> Explain how much you charge and how you do everything
+    <<save Eventsystem prudence 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Thank you!
+    Player: I do that yes.
+    Player: I need to know the number of guests.
+    Tree: Maybe ehm..
+    <<animation Tree(Clone) Negative>>
+    <<expression TreeFace Serious>>
+    Tree: Thirty..
+    Tree: Thirty..three..
+    <<animation Tree(Clone) Positive>>
+    <<expression TreeFace Happy>>
+    Tree: Thirty..four!
+    Player: That´s awesome, write that down please.
+    Player: When is the party?
+    <<animation Tree(Clone) Negative>>
+    <<expression TreeFace Serious>>
+    Tree: It´s in three..
+    <<animation Tree(Clone) Positive>>
+    <<expression TreeFace Happy>>
+    Tree: Four weeks!
+    Player: Cool! I take half of the price 2 days before the party.
+    Player: And the rest after the party.
+    Tree: That is..
+    <<animation Tree(Clone) Positive>>
+    <<expression TreeFace Happy>>
+    Tree: That is alright!
+    Player: Okie Dokie, lemon squeezy! Write down everything and let me know one week before!
+    Tree: I will. Thank you
+    Ooofff. Now you are planning everything. You are running a real business here!
+===

@@ -1,0 +1,35 @@
+title: Sit_RudeCustomer_BvK_29
+tags: 
+colorID: 0
+position: 190,200
+---
+Is that the troublemaker Bear customer again?
+<<moodBoard EventSystem angry>>
+<<animation Bear(Clone) Negative>> 
+<<expression BearFace Angry>>
+Bear: You gave me the wrong change!
+Player: What?
+Bear: Are you dumb? I said you gave me the wrong change.
+Player: I have a diary where I write everything down.
+Player: Let me check.
+You checked the diary and everything looks correct.
+-> Trust your abilities and diary. Defend yourself
+    <<save EventSystem bravery 10>>
+    <<moodBoard EventSystem happy>>
+    Player: I write eeeverything down and everything is correct.
+    <<moodBoard EventSystem angry>>
+    Bear: I am bigger than you. Keep that in mind.
+    Player: So what? You are still wrong. 
+    Player: I trust my abilities and if there where any problems I would give you the money back. 
+    OOff. Good thing you defended yourself. That took a lot of courage.
+-> Explain again in a nice way
+    <<save EventSystem kindness 10>>
+    <<moodBoard EventSystem happy>>
+    Player: So I have this diary and I write everything down. I know you are angry but I did everything right. If not I would give you the money back. Trust me.
+    Player: Maybe you lost your money?
+    <<expression BearFace Neutral>>
+    Bear: Hmm. I don´t know, maybe. 
+    Player: Can I do anything else for you?
+    Bear: No, not now. 
+    He was very angry but you handled the situation good and calmed him down.
+===

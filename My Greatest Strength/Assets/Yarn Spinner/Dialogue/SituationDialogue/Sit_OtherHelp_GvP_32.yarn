@@ -1,0 +1,23 @@
+title: Sit_OtherHelp_GvP_32
+tags: 
+colorID: 0
+position: 418,493
+---
+//Customer who needs help with other
+Wheeee, is that a ladybug! It´s sitting on your stand next to your lemonades.
+-> Leave them their as they are also enjoying the weather
+    <<save EventSystem gratitude 10>>
+    <<moodBoard EventSystem happy>>
+    Player: I will leave you here little ladybug.
+    Player: Are you having fun theree?
+    Player: You can help me.
+    Little ladybug wanted to be friends with youu.
+-> Put them somewhere else as they could get into the lemonade
+    <<save EventSystem prudence 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Hii, little ladybug.
+    Player: I will move you veery carefully to the other side
+    Player: This drink is for customers
+    Player: You can have the other one!
+    It would baad when they fell into your lemonade. You're a smart cookie.
+===

@@ -1,0 +1,43 @@
+title: Sit_MoneyProblem_KvP_7
+tags: 
+colorID: 0
+position: -369,408
+---
+    //Customers who have problems with money
+Hmm. Looks like this customer does not have enough money. Let´s see what they have to say..
+<<moodBoard EventSystem angry>>
+<<animation Candle(Clone) Negative>>
+<<expression CandleFace Anxious>>
+Candle: H-hey.. I was just looking for change..
+<<moodBoard EventSystem happy>>
+Player: That´s okay. Take your time.
+<<moodBoard EventSystem angry>>
+<<animation Candle(Clone) Negative>>
+<<expression CandleFace Unsure>>
+Candle: I fink I forgot to bring money.. I bought somefing else.. Kinda firsty. The weafer is very..
+<<moodBoard EventSystem happy>>
+Player: Warm, right?
+<<animation Candle(Clone) Positive>>
+<<expression CandleFace Anxious>>
+Candle: Yes, I am literally sweating.. Look! 
+<<moodBoard EventSystem angry>>
+<<animation Candle(Clone) Positive>>
+<<expression CandleFace Unsure>>
+Candle: Do you have leftover lemonade or somefing? F-for me?
+-> Give them lemonade.
+    <<save EventSystem kindness 10>>
+    <<moodBoard EventSystem happy>>
+    Player: No, I can give you the lemonade. It´s okay. Don´t worry about it.
+    <<animation Candle(Clone) Positive>>
+    <<expression CandleFace Happy>>
+    Candle: Fank you! It looks soooo refreshing.
+    Some people have problems with money. Life is not always fair. You helped a customer that looked like they really need a freshhh drink. That was very kindhearted. I hope you know that.
+-> Ask them to help you in exchange.
+    <<save EventSystem prudence 10>>
+    <<moodBoard EventSystem happy>>
+    Player: It is sooo full here. I can use a helping hand. Do you mind pouring some glasses and I can give you the lemonade as a thank you? 
+    <<animation Candle(Clone) Positive>>
+    <<expression CandleFace Happy>>
+    Candle: R-Really? Of course! I am pleased to help. 
+    That was an awesome deal! Win win!
+===

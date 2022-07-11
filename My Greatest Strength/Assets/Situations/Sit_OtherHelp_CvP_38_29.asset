@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a6da967049b3924d8bec414ee1ca7fe, type: 3}
-  m_Name: RecordingSituation
+  m_Name: Sit_OtherHelp_CvP_38_29
   m_EditorClassIdentifier: 
-  eventNameToStart: RecordingScript
+  eventNameToStart: Sit_OtherHelp_CvP_38_29
   Variables:
-  - Npc: {fileID: 5705400277155567080, guid: 5b03aac9531d1d64b91110732af7b36d, type: 3}
-    NpcName: Trent
+  - Npc: {fileID: 8888835671611843949, guid: 32ca77b953266964788ad4a073bbe1ed, type: 3}
+    NpcName: 
+  - Npc: {fileID: 5243668098147650446, guid: 4b216302943ed0047aae7af392345d1e, type: 3}
+    NpcName: 

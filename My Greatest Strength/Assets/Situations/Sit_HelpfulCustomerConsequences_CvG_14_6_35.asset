@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a6da967049b3924d8bec414ee1ca7fe, type: 3}
-  m_Name: TestSituation
+  m_Name: Sit_HelpfulCustomerConsequences_CvG_14_6_35
   m_EditorClassIdentifier: 
-  eventNameToStart: Start
+  eventNameToStart: Sit_HelpfulCustomerConsequences_CvG_14_6_35
   Variables:
-  - Npc: {fileID: 5243668098147650446, guid: 4b216302943ed0047aae7af392345d1e, type: 3}
+  - Npc: {fileID: 8293763067994714416, guid: 023b73ad4038a9f4c86cef8caa30e458, type: 3}
     NpcName: 
-  - Npc: {fileID: 5705400277155567080, guid: 5c02f8cf641910b4facbf1f1e07f9b3f, type: 3}
-    NpcName: Fake
-  - Npc: {fileID: 5705400277155567080, guid: 758b51c36354cef4f914e5eeaf6c251c, type: 3}
-    NpcName: Teste
+  - Npc: {fileID: 8270135843491887030, guid: d3b332a222a58064b97af4d7b91744da, type: 3}
+    NpcName: 

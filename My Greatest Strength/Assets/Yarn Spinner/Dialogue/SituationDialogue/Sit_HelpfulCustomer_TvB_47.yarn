@@ -1,0 +1,39 @@
+title: Sit_HelpfulCustomer_TvB_47
+tags: 
+colorID: 0
+position: 860,404
+---
+    //Helpful Customer
+Congratulations! You got a huge order to be picked up soon. You are preparing that order. There are a lot of customers and they also want lemonade. There is not enough lemonade now.
+-> Ask your friend Owl for help to make more lemonade and give her free lemonade
+    <<save EventSystem teamwork 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Owl, do you want a free lemonade?
+    <<animation Owl(Clone) Positive>>
+    <<expression OwlFace Neutral>>
+    Owl: You need my help again, right?
+    Player: Yeee!! Pleease..
+    <<animation Owl(Clone) Positive>>
+    <<expression OwlFace Happy>>
+    Owl: Of course! We are a team.
+    Player: I don´t have lemonade left. Let´s make some lemonade together?
+    Owl: Let´s do this!!
+    Asking for help can be hard sometimes. But with a good friend like Owl everything gets easier. See??
+-> Tell the customers that you don´t have lemonade left. It will take some time
+    <<save EventSystem bravery 10>>
+    Player: Heyoo! I´m sorry. The lemonade will take some time.
+    <<moodBoard EventSystem angry>>
+    <<animation Bear(Clone) Negative>>
+    <<expression BearFace Neutral>>
+    Bear: Grhhhhhh!!!!!!
+    <<moodBoard EventSystem happy>>
+    Player: I know it is upsetting. I will do my best and be as quick as possible.
+    <<moodBoard EventSystem angry>>
+    <<animation Bear(Clone) Negative>>
+    <<expression BearFace Angry>>
+    Bear: GRHHHHH!!!
+    <<moodBoard EventSystem happy>>
+    Player: I will open the stand again when I am ready. 
+    Ooff, that was a difficult situation. I am glad you took your time with everything. 
+    Sometimes we can say things that make others upset like that. 
+===

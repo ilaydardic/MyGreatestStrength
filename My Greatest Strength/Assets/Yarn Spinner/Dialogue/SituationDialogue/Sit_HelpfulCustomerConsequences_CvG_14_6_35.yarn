@@ -1,0 +1,115 @@
+title: Sit_HelpfulCustomerConsequences_CvG_14
+tags: 
+colorID: 0
+position: -225,209
+---
+    //Helpful Customer
+uuu what is that? Do you hear it, too? Is that..
+A bird? 
+No!! Look! It is this customer on the left. How??
+-> Clap hands and tell how good they did it
+    <<save EventSystem curiosity 10>>
+    <<moodBoard EventSystem happy>>
+    Player: *Clap Clap Clap*
+    Player: That was soo good. I thought it is a bird!!
+    <<animation Mushroom(Clone) Positive>>
+    <<expression MushroomFace Worried>>
+    Mushroom: You think so? I am going to a talent show.
+    Player: You are going to rockkk it!
+    <<animation Mushroom(Clone) Positive>>
+    <<expression MushroomFace Excited>>
+    Mushroom: Really?? You made me feel better!
+    Player: You should! 
+-> Learn how they did it
+    <<save EventSystem gratitude 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Hey! How did you do that. It was.. like a bird!
+    <<animation Mushroom(Clone) Positive>>
+    <<expression MushroomFace Friendly>>
+    Mushroom: I can teach you! 
+    That will take some practice. But you figured it out already! You learned a new skill!
+[[Sit_GenerousCustomerConsequences_GvC_6]] 
+===
+title: Sit_GenerousCustomerConsequences_GvC_6
+tags: 
+colorID: 2
+position: -173,574
+---
+    //Generous customer
+The customer enjoyed your company a lot. They are sooo happy to meet you! You are a lovely lemonade seller.
+As a thank you they give you a tip. You are couple of bucks closer to your dream bike.
+-> Thank them.
+    <<save EventSystem gratitude 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Thank you so much. That is sooo sweet of you!!
+    <<animation Mushroom(Clone) Positive>>
+    <<expression MushroomFace Excited>>
+    Mushroom: That happens when I meet children like you! I actually know a lot of locals and will definetly tell them about your stand.
+    -> Thank them for their suuuper help.
+    <<save EventSystem gratitude 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Really? That mean a loot to me. Thank youu!
+    -> Ask them about their friends. Maybe you saw them.
+    <<save EventSystem curiosity 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Who are the locals you know? Maybe I saw them here?
+    <<animation Mushroom(Clone) Positive>>
+    <<expression MushroomFace Friendly>>
+    Mushroom: It is the Owl, she is very cute
+    Player: Oh I know them. Maybe I will see them again!
+    The Mushroom leaves with a big smile. You brighten everyones day with your kind heart! Maybe there will be more customers for you. Keep up the good work.
+-> Continue to know them better.
+    <<save EventSystem curiosity 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Are you from this town? I have not seen you before.
+    <<animation Mushroom(Clone) Positive>>
+    <<expression MushroomFace Worried>>
+    Mushroom: Actually I lived here for 10 years now. I barely go out because of my allergies. 
+    Player: Oh no that must be stooopid. 
+    <<animation Mushroom(Clone) Negative>>
+    <<expression MushroomFace Worried>>
+    Mushroom: Yes, sometimes it gets rough.. But when I meet such amazing hearts I feel much better! I actually know a lot of locals and will definetly tell them about your stand. 
+    -> Thank them for their suuuper help.
+    <<save EventSystem gratitude 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Really? That mean a loot to me. Thank youu!
+    <<save EventSystem curiosity 10>>
+    <<moodBoard EventSystem happy>>
+    -> Ask them about their friends. Maybe you saw them.
+    Player: Who are the locals you know? Maybe I saw them here?
+    <<animation Mushroom(Clone) Positive>>
+    <<expression MushroomFace Friendly>>
+    Mushroom: It is the Owl, she is very cute
+    Player: Oh I know them. Maybe I will see them again!
+    The Mushroom leaves with a big smile. Who knows maybe you will get more customers? Keep up the good work. 
+[[Sit_HelpfulCustomerConsequences_GvC_35]] 
+===
+title: Sit_HelpfulCustomerConsequences_GvC_35
+tags: 
+colorID: 2
+position: 121,524
+---
+    //Helpful Customer consequences
+After a while, a chatty customer tells you that you have a lot of customers today.
+-> Express your happiness.
+    <<save EventSystem gratitude 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Yeee! I also noticed that. I think it was because of a customer. I am so haaapppyyy about it. Thank you thank you!
+    <<animation Owl(Clone) Positive>>
+    <<expression OwlFace Happy>>
+    Owl: You are soo bubbly I love that. Yeah, maybe they did!
+    It is a very nice thing that you appreciate each of your customers and are thankful about it. Good things will find you!
+-> Ask why they think that happened.
+    <<save EventSystem curiosity 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Yes there are a looot of customers. Do you know why that is?
+    <<animation Owl(Clone) Positive>>
+    <<expression OwlFace Serious>>
+    Owl: I only know that some locals are talking about how good you make people feel. I saw it myself as well. And the lemonade is soooooo deliciouss..
+    Player: I think it was the Mushroom!
+    <<animation Owl(Clone) Positive>>
+    <<expression OwlFace Happy>>
+    Owl: Oh, you know the Mushroom? We are very close!
+    Player: Yee, they told me about you. 
+    Ohh so that is why there are a lot of lemonade lovers around..You are truly unique. And your lemonade of course!
+===

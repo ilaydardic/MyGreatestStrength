@@ -1,0 +1,24 @@
+title: Sit_HelpfulCustomer_GvB_11
+tags: 
+colorID: 0
+position: -282,197
+---
+    //Helpful Customer
+Off..it looks stressful here. 
+<<animation Owl(Clone) Positive>>
+<<expression OwlFace Happy>>
+Owl: Hey! I am waiting for a friend and I am booored. I can help you. You look stressed.
+-> Accept help
+    <<save EventSystem gratitude 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Wow! That is so nice of you. Thank you so much. I could use a helping hand here! You can also have a lemonade!
+    You are so thankful and the customer soo helpful. DREAM TEAM!
+-> Challenge yourself and say no
+    <<save EventSystem bravery 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Thank you but I want to see if I can do it myself. I accept the challenge!!
+    <<animation Owl(Clone) Positive>>
+    <<expression OwlFace Serious>>
+    Owl: Oh I see. That is a braaave move! 
+    It is brave, yes. But I believe in you. 
+===

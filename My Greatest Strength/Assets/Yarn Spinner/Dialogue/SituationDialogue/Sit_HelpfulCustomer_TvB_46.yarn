@@ -1,0 +1,54 @@
+title: Sit_HelpfulCustomer_TvB_46
+tags: 
+colorID: 0
+position: 279,389
+---
+    //Helpful Customer
+Oh noo! There is a strong wind! Your signboard flew to the neighbors yard!
+Double Oh no! They have a dog! A veeery not nice dog.. The owners are not home yet. You have to get the signboard. 
+-> Ask customer to distract the dog and you get the signboard
+    <<save EventSystem teamwork 10>>
+    <<moodBoard EventSystem angry>>
+    Player: Owl, help mee!!!
+    <<animation Owl(Clone) Positive>>
+    <<expression OwlFace Serious>>
+    Owl: How????
+    Player: You have to distract the dog.
+    <<animation Owl(Clone) Negative>>
+    <<expression OwlFace Happy>>
+    Owl: What?!?!!
+    Player: Ye, and I will get the signboard.
+    <<animation Owl(Clone) Positive>>
+    <<expression OwlFace Serious>>
+    Owl: That is.. a sneeeeaky plan.
+    Owl: What should I do??
+    Player: Ehm.. Dance??
+    Owl: Dance????
+    Player: Ye
+    <<animation Owl(Clone) Positive>>
+    <<expression OwlFace Happy>>
+    Owl: ... Okay. I will do it.
+    <<moodBoard EventSystem happy>>
+    Owl and you are a great duo. Owls goofy dance shocked the dog! It shocked me too.. You were able to get the signboard quickly. Oh! You should find a team name with Owl!!
+-> Give a treat to the dog and try to be friends and get the signboard
+    <<save EventSystem bravery 10>>
+    <<moodBoard EventSystem angry>>
+    Player: I will get a treat and be friends with the dog.
+    <<animation Owl(Clone) Positive>>
+    <<expression OwlFace Serious>>    
+    Owl: How???
+    Player: I don´t know yet. I will be very careful.
+    <<animation Owl(Clone) Negative>>
+    <<expression OwlFace Serious>>
+    Owl: Oh oh.. Are you sure?
+    <<moodBoard EventSystem happy>>
+    Player: Yes!
+    <<animation Owl(Clone) Positive>>
+    <<expression OwlFace Happy>>
+    Owl: That´s soo cool. You are like a superhero!
+    Player: You think so?
+    <<animation Owl(Clone) Positive>>
+    <<expression OwlFace Neutral>>
+    Owl: Of course! Look at you.
+    You overcome your fear and carefully give the dog a treat. Turns out the dog only looks angry but is a super friendly dog. You get the signboard and get out. Owl was right, you are like a superhero.
+===
