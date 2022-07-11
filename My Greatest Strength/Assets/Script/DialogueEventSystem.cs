@@ -184,6 +184,8 @@ public class DialogueEventSystem : MonoBehaviour
         Destroy(spawnHolder[0]);
         Destroy(spawnHolder[1]);
         eventQueue.Remove(eventQueue.First());
+        npcPositionToScreen[0].npc = null;
+        npcPositionToScreen[1].npc = null;
     }
 
     void SpawnDestroyNpc(int forInt, int leftOrRight)
