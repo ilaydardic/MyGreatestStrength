@@ -1,0 +1,59 @@
+title: Sit_MoneyProblem_TvG_24
+tags: 
+colorID: 0
+position: 373,207
+---
+    //Customer who has problems with money
+<<moodBoard EventSystem happy>>
+Player: Here your lemonade!
+<<moodBoard EventSystem angry>>
+<<animation Tree(Clone) Positive>>
+<<expression TreeFace Serious>>
+Tree: One 
+Tree: Second...
+Tree: Hmmm.
+Tree: Ehm.. one.. two
+Tree: Five..
+<<animation Tree(Clone) Negative>>
+<<expression TreeFace Sad>>
+Tree: Where was I..
+Tree: One..
+Tree: Two..
+Tree: Three...Four..
+Tree: Huh..
+<<animation Tree(Clone) Positive>>
+<<expression TreeFace Annoyed>>
+Tree: I just have a lot of coins..I´m sorry.
+Looks like they will take time counting the money. 
+-> Offer to count the coins together.
+    <<save EventSystem teamwork 10>>
+    <<moodBoard EventSystem happy>>
+    Player: We can count them together! I can help you.
+    <<animation Tree(Clone) Positive>>
+    <<expression TreeFace Serious>>
+    Tree: I don´t want to waste your time..
+    Player: No it´s fun. No worries
+    <<animation Tree(Clone) Positive>>
+    <<expression TreeFace Friendly>>
+    Tree: I am thankful for this. 
+    What is better than one hand? TWO! Together it is faster. Well done!
+-> Appreciate their coins and tell them it is okay to take time. You will wait
+    <<save EventSystem gratitude 10>>
+    <<moodBoard EventSystem happy>>
+    Player: I need soo much change here. That´s tooootally okay!
+    Player: Take aaaall the time you need.
+    <<moodBoard EventSystem angry>>
+    <<animation Tree(Clone) Positive>>
+    <<expression TreeFace Serious>>
+    Tree: Onee..
+    Tree: Two.
+    Tree: Four
+    Tree: ...
+    <<moodBoard EventSystem happy>>
+    <<animation Tree(Clone) Positive>>
+    <<expression TreeFace Happy>>
+    Tree: FIVE!
+    Tree: There you go!
+    Player: Thank you so much! Now I can use all of these.
+    You made them feel welcomed. You appreciate all the small things. Well done!
+===

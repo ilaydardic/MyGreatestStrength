@@ -1,0 +1,53 @@
+title: Sit_OtherHelp_KvP_31
+tags: 
+colorID: 0
+position: 294,469
+---
+//Customer who needs other help
+    <<animation Candle(Clone) Negative>>
+    <<expression CandleFace Anxious>>
+Oh no! The Candle spilled their drink on the ground.
+-> Console them as they might felt guilty
+    <<save EventSystem kindness 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Are you doing fine?
+    <<moodBoard EventSystem angry>>
+    <<expression CandleFace Horrified>>
+    Candle: I´m so so so so sorry. I´m so sorry. I fink I ruined everyfing.
+    <<moodBoard EventSystem happy>>
+    Player: No! You didn´t do anything.
+    Player: We can clean it up. It´s all good.
+    <<moodBoard EventSystem angry>>
+    Candle: I´m so dumb. How can do fis.
+    Candle: Everone is looking at me.
+    <<moodBoard EventSystem happy>>
+    Player: No you´re not. It´s just lemonade!
+    Player: You did something good, too?
+    <<expression CandleFace Unsure>>
+    Candle: What? How??
+    Player: The ants can drink something on this hot day. Look!
+    Candle: Oh wow! Fey are so cute. 
+    Player: You made them soo happy. You should be proud of yourself.
+    Candle: You fink so?
+    Player: Yes! And we can just clean it up together. 2 Minutes.
+    <<animation Candle(Clone) Positive>>
+    Candle: Oh okay. I I can help. 
+    <<expression CandleFace Happy>>
+    Player: Of course you can.
+    That was incredible! That is such a nice way to make them feel better. 
+-> Clean up the spilled lemonade. Someone could slip and hurt themselves. 
+    <<save EventSystem prudence 10>>
+    <<moodBoard EventSystem angry>>
+    Player: Are you alright? 
+    <<expression CandleFace Horrified>>
+    Candle: Yes, I fink so. I´m so so so sorry.
+    <<moodBoard EventSystem happy>>
+    Player: That´s fine. I will quickly clean this so noone slips, okay?
+    Candle: O-okay. 
+    Player: See, now everything is clean again. Don´t worry!
+    <<animation Candle(Clone) Positive>>
+    <<expression CandleFace Anxious>>
+    Candle: Yes. Fank you.
+    Player: No worries. Now, it´s safe again.
+    Nice work! It would be soo bad if someone slipped. You are very cautious.
+===

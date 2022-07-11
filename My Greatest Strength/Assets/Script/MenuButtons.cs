@@ -11,7 +11,7 @@ public class MenuButtons : MonoBehaviour
 
         IEnumerator WaitForSound()
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.7f);
 
             SceneManager.LoadScene("BuildScene");
         }
@@ -19,11 +19,12 @@ public class MenuButtons : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        Time.timeScale = 1f;
         StartCoroutine(WaitForSound());
 
         IEnumerator WaitForSound()
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.7f);
 
             SceneManager.LoadScene("Menus1Scene");
         }
@@ -31,11 +32,12 @@ public class MenuButtons : MonoBehaviour
 
     public void ExitGame()
     {
+        Time.timeScale = 1f;
         StartCoroutine(WaitForSound());
 
         IEnumerator WaitForSound()
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.7f);
 
             Application.Quit();
         }

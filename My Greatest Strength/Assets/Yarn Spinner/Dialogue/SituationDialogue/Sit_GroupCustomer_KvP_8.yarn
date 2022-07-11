@@ -1,0 +1,22 @@
+title: Sit_GroupCustomer_KvP_8
+tags: 
+colorID: 0
+position: -36,351
+---
+    //Group Customer
+Oof, good job! It looks like you have a lot of lemonade fans. Look at the line!
+The customers cannot decide and are taking long..even if it is just lemonade. What can you do?
+-> Wait for them to make a choice.
+    <<save EventSystem kindness 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Take your time! I have fresh and juiiicy lemonade.
+    <<animation Bat(Clone) Positive>>
+    <<expression BatFace Angry>>
+    Bat: We cannot decide how many aaaaghh.
+    After a while the customers made their order. It is a veeeeryy friendly gesture. I bet you are an amazing friend!
+-> Take other orders until they decide.
+    <<save EventSystem prudence 10>>
+    <<moodBoard EventSystem happy>>
+    Player: How about you take aaaaall the time deciding. I can just take orders from other customers. When you are ready let me know!
+    Big brain time! That was so smart. Now you can keep going with your business and other customers don´t have to wait. Everyone is happy! I have to note that..
+===

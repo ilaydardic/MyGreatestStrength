@@ -110,21 +110,19 @@ public class YarnCommands : MonoBehaviour
         if (choiceID.Equals(0))
         {
             soundEffects[0].Play();
+            soundEffects[1].Play();
 
             valveAnimation[0].GetComponent<Animation>().Play("Rotate");
             yield return new WaitForSeconds(lemonadeAnimation.length);
-
-            soundEffects[1].Play();
         }
         else if(choiceID.Equals(1))
         {
             soundEffects[0].Play();
+            soundEffects[1].Play();
 
             valveAnimation[1].GetComponent<Animation>().Play("Rotate");
             //both lemonade animation have the same length duration so should be alright 
             yield return new WaitForSeconds(lemonadeAnimation.length);
-
-            soundEffects[1].Play();
         }
         else
         {

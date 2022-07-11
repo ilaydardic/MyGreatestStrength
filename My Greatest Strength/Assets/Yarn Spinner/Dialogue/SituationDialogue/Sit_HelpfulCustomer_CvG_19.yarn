@@ -1,0 +1,36 @@
+title: Sit_HelpfulCustomer_CvG_19
+tags: 
+colorID: 0
+position: 860,404
+---
+    //Helpful Customer
+Hm? Your eyes started to hurt?
+    <<animation Mushroom(Clone) Negative>>
+    <<expression MushroomFace Worried>>
+Mushroom: Are you okay? Your eyes are red. I saw you
+Player: It huuuurtss!
+-> Ask them how that happened
+    <<save EventSystem curiosity 10>>
+    <<moodBoard EventSystem angry>>
+    Player: Did you see what happened?
+    <<animation Mushroom(Clone) Positive>>
+    <<expression MushroomFace Excited>>
+    Mushroom: Yes! I know, I knooww.
+    Mushroom: You squeezed the lemons and it got into your eyes!
+    <<animation Mushroom(Clone) Positive>>
+    <<expression MushroomFace Friendly>>
+    Mushroom: Try to blink fast.
+    Player: Oh okay..wait..It gets
+    <<moodBoard EventSystem happy>>
+    Player: better?
+    Ohh so that´s why your eyes turned red. I did not see that! Good thing you asked. 
+    Now you can be more careful. 
+-> Thank them for their concern
+    <<save EventSystem gratitude 10>>
+    <<moodBoard EventSystem happy>>
+    <<animation Mushroom(Clone) Negative>>
+    <<expression MushroomFace Worried>>
+    Mushroom: Yeah, I bet. Looks painful. Do you need anything?
+    Player: I don´t know but thank you for your concern. That´s very kind!
+    The mushroom is always there to help you. 
+===

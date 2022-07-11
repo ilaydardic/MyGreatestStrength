@@ -1,0 +1,48 @@
+title: Sit_HelpfulCustomer_GvP_45
+tags: 
+colorID: 0
+position: 860,404
+---
+    //Helpful Customer
+A familiar face!
+<<animation Owl(Clone) Positive>>
+<<expression OwlFace Happy>>
+Owl: How you doing!
+Player: Heyya! We missed youu.
+<<animation Owl(Clone) Positive>>
+<<expression OwlFace Serious>>
+Owl: I met with an old friend. She is a famous food critic. 
+Owl: She travels all across the town and tastes food and writes about it.
+Player: That is soo nice!
+<< moodBoard EventSystem happy>>
+<<animation Owl(Clone) Positive>>
+<<expression OwlFace Happy>>
+Owl: What´s nicer is, I told her about you and she will be here!
+Player: When?? 
+<<animation Owl(Clone) Negative>>
+<<expression OwlFace Serious>>
+Owl: I don´t know she doesn´t tell that.
+-> Thank Owl geniunly for her effort of telling such a big name about you
+    <<save EventSystem gratitude 10>>
+    << moodBoard EventSystem happy>>
+    Player: Owl, thank you so much. This is biiiig news. I am so happy!
+    <<animation Owl(Clone) Positive>>
+    <<expression OwlFace Neutral>>
+    Owl: Aww, don´t even mention it.
+    Player: You always make me so happy. 
+    Player: You are not an Owl you are an Angel-Owl!
+    Owl is such a good friend. I love her so much. She always does so many good things.
+    I am proud of you for telling her that.
+-> Plan to make the lemonade extra great the next days. 
+    <<save EventSystem prudence 10>>
+    << moodBoard EventSystem happy>>
+    Player: That is so exciting!
+    <<animation Owl(Clone) Positive>>
+    <<expression OwlFace Happy>>
+    Owl: I knoww!!
+    Player: I will make the lemonade extra good! With the best lemons on earth.
+    <<animation Owl(Clone) Positive>>
+    <<expression OwlFace Neutral>>
+    Owl: You got it!
+    If the friend of the Owl likes your lemonade she will write about you! YOu will be everywhere! Make veery super duper sweet lemonade! Good plan.. Good plan.
+===

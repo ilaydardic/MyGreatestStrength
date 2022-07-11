@@ -1,0 +1,34 @@
+title: Sit_HelpfulCustomer_TvP_41
+tags: 
+colorID: 0
+position: 335,407
+---
+    //Helpful Customer
+Woow! The smell of fresh lemons! The lemons you wanted came. They are in big boxes and too heavy! The line is also getting longer..
+-> Ask for help to carry together
+    <<save EventSystem teamwork 10>>
+    << moodBoard EventSystem happy>>
+    Player: Can some of you help me carry the boxes. They are lemons!
+    <<animation StoneGolem(Clone) Positive>>
+    <<expression StoneGolemFace Neutral>>
+    StoneGolem: I can help you.
+    Player: Woooaa! Suuper!
+    Player: You carry from one side and I will take the other side!
+    <<animation StoneGolem(Clone) Positive>>
+    <<expression StoneGolemFace Friendly>>
+    StoneGolem: Let´s do this!
+    That´s the team we need! Together it is soooo much easier, right?
+-> Serve customers first and then carry them 
+    <<save EventSystem prudence 10>>
+    << moodBoard EventSystem happy>>
+    <<animation StoneGolem(Clone) Positive>>
+    <<expression StoneGolemFace Neutral>>
+    StoneGolem: You need help with these?
+    Player: No, I will do them later when the line is less!
+    Player: I don´t want customers to wait.
+    Player: Thank you!
+    <<animation StoneGolem(Clone) Positive>>
+    <<expression StoneGolemFace Friendly>>
+    StoneGolem: Whatever you need.
+    That´s very considerate of your customers. Some customers get really angry when they wait longer. Now you don´t have to deal with them. Just do the lemons later.
+===

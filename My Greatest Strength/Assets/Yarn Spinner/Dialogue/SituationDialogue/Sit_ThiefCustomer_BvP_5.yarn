@@ -1,0 +1,19 @@
+title: Sit_ThiefCustomer_BvP_1
+tags: 
+colorID: 0
+position: 860,404
+---
+//Thief customer
+That looks like a suspicious customer doesn´t it?
+They are attempting to steal a glass of lemonade from your stand. What can you do now?
+-> Call them out loudly. You are aware of their actions
+    <<moodBoard EventSystem angry>>
+    <<save EventSystem bravery 10>>
+    Player: Hey! I do not like your behaviour. Do not do this here okay? I am working very hard for my bike!
+    Yes! There are a lot of customers around to protect you. They would not dare to steal from you ever again!
+-> Remind them to pay and tell them it is wrong.
+    <<moodBoard EventSystem angry>>
+    <<save EventSystem prudence 10>>
+    Player: I think you forgot to pay for your drink. I would appreciate it. I am trying to safe money for my bike. And not paying is toootally wrong!
+    They look ashamed. Good way of handling the situation! You explained them what they did is wrong straight away.
+===

@@ -1,0 +1,48 @@
+title: Sit_OtherHelp_TvP_26
+tags: 
+colorID: 0
+position: 297,178
+---
+//Customers who need help with other 
+Player: Your drinks!
+Candle: Fanks. 
+Player: Are you carrying allll 6 drinks alone??
+    <<expression CandleFace Unsure>>
+Candle: I fink so.
+-> Ask the Bat to help the Candle
+    <<save EventSystem teamwork 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Hey Bat!
+    <<moodBoard EventSystem angry>>
+    <<expression BatFace Neutral>>
+    Bat: Mm?
+    Player: Hey Baat!!
+    Bat: What do you want?
+    <<moodBoard EventSystem happy>>
+    Player: Can you help the Candle with their drinks?
+    <<moodBoard EventSystem angry>>
+    Bat: No, why would I?
+    <<moodBoard EventSystem happy>>
+    Player: Because you have sooo many strong arms.
+    Player: We only have two!
+    <<expression BatFace Friendly>>
+    <<animation Bat(Clone) Positive>>
+    Bat: Well..That is true. I am veeery strong.
+    Bat: Give me the lemonades.
+    Hahaha that was soooo smart. You tricked them into teamwork! I mean the Bat does have a looot of hands..
+-> Tell them to go one by one
+    <<save EventSystem prudence 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Go one by one.
+    <<moodBoard EventSystem angry>>
+    Candle: How can I do fat?
+    Player: That? Ehm so..
+    <<moodBoard EventSystem happy>>
+    Player: You take one drink and bring it to your friends.
+    Player: Then come back and do it again. 
+    Player: Then you won´t spill the drink!
+    <<expression CandleFace Happy>>
+    <<animation Candle(Clone) Positive>>
+    Candle: Fat is a good idea. 
+    You showed them how to do it! You are like a teacher.
+===

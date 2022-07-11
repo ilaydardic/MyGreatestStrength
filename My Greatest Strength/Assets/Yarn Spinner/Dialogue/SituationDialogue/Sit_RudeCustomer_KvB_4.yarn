@@ -1,0 +1,26 @@
+title: Sit_RudeCustomer_KvB_4
+tags: 
+colorID: 0
+position: 860,403
+---
+//Rude customer
+Oh oh! You spot a grumpy customer cutting the line. They look line in a rush. Still..
+-> Understand their rush and give them the lemonade.
+    <<save EventSystem kindness 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Hello! I get that you are in a rush. Everyone can be! For this time I will give you the lemonade.
+    <<expression StoneGolemFace Annoyed>>
+    StoneGolem: Well..thank you. I have to pick up something that is why and I am soooo tired!
+    StoneGolem: Today is a really reallyy dumb day..
+    That was so nice of you. They had a reaaally bad day, huh? You surely made them feel really good!
+-> Ask them to go back as everyone is waiting in line.
+    <<save EventSystem bravery 10>>
+    <<moodBoard EventSystem angry>>
+    Player: I understand that you are in a hurry. Buuut you cut the line. Other customers are before you
+    <<expression StoneGolemFace Annoyed>>
+    StoneGolem: No. I want my lemonade, I have been waiting for sooo long now!
+    Player: Everyone is waiting! What you did is not fair. Please go back to the line. I will be as fast as I can.
+    <<animation StoneGolem(Clone) Negative>>
+    StoneGolem: Well this is ridiculous.
+    Ooof.. What a grumpy customer. You stood by your decision! Even in an uncomfortable situation. You are fearless!
+===

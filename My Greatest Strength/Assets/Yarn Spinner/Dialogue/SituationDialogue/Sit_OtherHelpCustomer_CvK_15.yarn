@@ -1,0 +1,46 @@
+title: Sit_OtherHelpCustomer_CvK_15
+tags: 
+colorID: 0
+position: 415,238
+---
+//Other Help Customer
+Do you see that next customer over there. They look sad.
+-> Ask them what is wrong
+    <<save EventSystem curiosity 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Hey, is everything alright with you?
+    <<moodBoard EventSystem angry>>
+    <<animation Candle(Clone) Negative>>
+    <<expression CandleFace Anxious>>
+    Candle: Yes, why..
+    Player: Dunno. You looked sad. Maybe you want to talk.
+    Candle: I was just overwhelmed with the crowd. 
+    Candle: It is too much sometimes.
+    Player: Yeah, sometimes I get that, too..
+    <<moodBoard EventSystem happy>>
+    Candle: Really?
+    <<expression CandleFace Happy>>
+    Player: Yes, of course. You don´t have to be ashamed. 
+    Look at the bright smile they gave you. Okay, so now we know that some customers don´t like the crowd. It is good to know more about each customer to make it better for them.
+-> Treat them very nicely
+    <<save EventSystem kindess 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Hey, how are you?
+    <<moodBoard EventSystem angry>>
+    <<animation Candle(Clone) Negative>>
+    <<expression CandleFace Anxious>>
+    Candle: Good. I guess..
+    <<moodBoard EventSystem happy>>
+    Player: So you want one lemonade?
+    Candle: Yes.
+    Player: One lemonade comiiing!
+    Player: There you go! I made it with muuuch love for youu becasue you deserve it!
+    <<animation Candle(Clone) Positive>>
+    <<expression CandleFace Happy>>
+    Candle: Oh wow..Fank you..fat´s nice. 
+    Player: Let me know if you need anything else. I´m here.
+    Candle: Oh okay.. I will
+    Player: Have an amaaaaazing day.
+    Candle: You too!
+    Look at the bright smile you gave them. That was as sweet as the lemonade. Good job!
+===

@@ -1,0 +1,41 @@
+title: Sit_MoneyProblems_KvG_34
+tags: 
+colorID: 0
+position: -126,446
+---
+    //Customer who have money problems
+A younger customer approaches you. They counted the money wrong.
+-> Let them know that they counted it wrong and give lemonade
+    <<save EventSystem kindness 10>>
+    <<moodBoard EventSystem angry>>
+    Player: It seems like you have couple of coins missing.
+    <<animation Candle(Clone) Negative>>
+    <<expression CandleFace Horrified>>
+    Candle: Oh noo!
+    <<moodBoard EventSystem happy>>
+    Player: That´s alright. You can bring the rest tomorrow, okay?
+    <<animation Candle(Clone) Positive>>
+    <<expression CandleFace Unsure>>
+    Candle: Fat is so nice. Fank you. 
+    <<animation Candle(Clone) Positive>>
+    <<expression CandleFace Happy>>
+    Candle: I will bring it tomorrow. Promise!
+    Player: Promise!
+    That was a kind act. Next time they will also count better, too!
+-> Act like the money is correct
+    <<save EventSystem gratitude 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Here is your juuuiiicy lemonade. Enjoy!
+    <<animation Candle(Clone) Positive>>
+    <<expression CandleFace Happy>>    
+    Candle: Fank you!
+    Candle: You make me feel safe here.
+    <<moodBoard EventSystem angry>>
+    <<animation Candle(Clone) Negative>>
+    <<expression CandleFace Anxious>>
+    Candle: Sometimes I feel scared to buy somefing.
+    Candle: Because I always make mistakes.
+    <<moodBoard EventSystem happy>>
+    Player: You can always come to me.
+    Aww. You did not break their courage. Next time they will be more brave!
+===

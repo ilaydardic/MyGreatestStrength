@@ -1,0 +1,45 @@
+title: Sit_RudeCustomer_KvC_10
+tags: 
+colorID: 0
+position: 233,247
+---
+//Rude Customer
+Wha-What is going on there?
+<<moodBoard EventSystem angry>>
+<<expression BearFace Angry>>
+Bear: You must serve me first!
+Player: Ehmm.??? Why?
+Bear: I am older than eeeeveryone here!
+Player: You just cut the line.
+Bear: I know. But I am muuch older. 
+-> Ask other customers permission before serving
+    <<save EventSystem kindness 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Is it okay for you if I quickly give them the lemonade. I think they are a little tired..
+    Bear: Well.. I guess. 
+    Player: Thank you.
+    <<expression BearFace Neutral>>
+    Bear: I just need a little rest.. and a lemonade. Thank you!
+    That´s very considerate for both of your customers. 
+-> Ask them if they are feeling stressed today
+    <<save EventSystem curiosity 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Are you having a rough day? I know that normally you would not cut the line.
+    <<moodBoard EventSystem angry>>
+    <<animation Bear(Clone) Negative>>
+    <<expression BearFace Angry>>
+    Bear: NO I would!
+    <<moodBoard EventSystem happy>>
+    Player: I thought the elderly know rules better..
+    <<moodBoard EventSystem angry>>
+    <<expression BearFace Neutral>>
+    Bear: I do! I just.. 
+    <<expression BearFace Angry>>
+    Bear: My legs hurt. I am not the same anymore. And that´s ANNOYING..
+    Player: I understand. Here maybe this lemonade can cheer you up a little. There are good lemons and reeeally bad lemons sometimes. But we still love making AND DRINKING lemonade! 
+    Player: Maybe tomorrow there are better lemons around for you. 
+    <<expression BearFace Neutral>>
+    <<animation Bear(Clone) Positive>>
+    Bear: Maybe.. But this lemonade is yuuuummyyy!
+    Sometimes we must ask people how they are. Maybe nobody asked them and they just want to talk. Curiosity teaches us new things about new people we met.
+===

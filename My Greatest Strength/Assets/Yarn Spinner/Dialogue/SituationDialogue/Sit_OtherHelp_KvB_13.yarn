@@ -1,0 +1,29 @@
+title: Sit_OtherHelp_KvB_13
+tags: 
+colorID: 0
+position: 348,287
+---
+//Customer who need other help
+    <<animation Chameleon(Clone) Positive>>
+    <<expression ChameleonFace Happy>>
+Chameleon: What a s-s-sunnyy day! And a delic-c-ious lemonade. Tell me now, what is the recipe!!
+-> Tell some of it out of kindness
+    <<save EventSystem kindness 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Thank you! Soo happy you like it. I used lemonades. Best of lemonades. The secret is to using bio ones. 
+    <<moodBoard EventSystem angry>>
+    Chameleon: A-and what else.
+    <<moodBoard EventSystem happy>>
+    Player: Well you can have a lot of fun while trying out different recipes and find your delic-c-ious one!
+-> Don´t tell
+    <<save EventSystem bravery 10>>
+    <<moodBoard EventSystem angry>>
+    Player: It is my recipe and it is a secret. 
+    <<expression ChameleonFace Disappointed>>
+    Chameleon: Oh, come on! Tell me. I just want to know.
+    Player: Thank you but no.
+    <<expression ChameleonFace Angry>>
+    Chameleon: Well that is rude!
+    Player: No, find your own recipe. It is so much fun. But you have to respect my choice!
+    YES! You stood up for your wishes. If you don´t want to tell you don´t have to. Everyone must understand that!
+===

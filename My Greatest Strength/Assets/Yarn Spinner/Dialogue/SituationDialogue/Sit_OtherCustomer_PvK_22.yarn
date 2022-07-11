@@ -1,0 +1,38 @@
+title: Sit_OtherCustomer_PvK_22
+tags: 
+colorID: 0
+position: -89,231
+---
+    //Customer who need other help
+The Chameleon over there look, I think they can´t tie their.. scarf?
+-> Help them
+    <<save EventSystem kindness 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Heyyo, can I help you with your scarf?
+    <<animation Chameleon(Clone) Negative>>
+    <<expression ChameleonFace Disappointed>>
+    Chameleon: Yeah, I can´t reach it. My hands are..small. Normally, it stays in place.
+    Player: No worries, I got you!
+    <<moodBoard EventSystem angry>>
+    <<animation Chameleon(Clone) Negative>>
+    <<expression ChameleonFace Angry>>
+    Chameleon: That´s embarrassing.
+    <<moodBoard EventSystem happy>>
+    Player: Noo! I wouldn´t be able to tie this myself too!
+    <<animation Chameleon(Clone) Positive>>
+    <<expression ChameleonFace Neutral>>
+    Chameleon: Hmm. True
+    You are such an helpful person! 
+-> Let them try it out themselves 
+    <<save EventSystem prudence 10>>
+    <<moodBoard EventSystem angry>>
+    <<animation Chameleon(Clone) Negative>>
+    <<expression ChameleonFace Angry>>
+    Chameleon: This..thing..AGHHHHHHH!
+    Chameleon: Wait..I
+    <<moodBoard EventSystem happy>>
+    <<animation Chameleon(Clone) Positive>>
+    <<expression ChameleonFace Happy>>
+    Chameleon: I did it!
+    I didn´t expect that! You know what you are doing. You let them learn to do it themselves. Sometimes we don´t have someone to help us. Such a thoughtful way! 
+===

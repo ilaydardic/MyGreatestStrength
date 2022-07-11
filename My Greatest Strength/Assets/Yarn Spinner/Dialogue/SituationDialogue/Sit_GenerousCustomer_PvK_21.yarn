@@ -1,0 +1,33 @@
+title: Sit_GenerousCustomer_PvK_21
+tags: 
+colorID: 0
+position: 475,386
+---
+    //Generous Customer
+OH Noooo! You spilled lemonade on the customer.. Quick!
+-> Offer free lemonade to make up
+    <<save EventSystem kindness 10>>
+    <<moodBoard EventSystem angry>>
+    Player: I am so sorry. Here, a free lemonade!
+    <<animation Tree(Clone) Positive>>
+    <<expression TreeFace Friendly>>
+    Tree: That´s okay. It will actually help me grow faster.
+    <<moodBoard EventSystem happy>>
+    Tree: But I can´t say no to a lemonade.
+    Player: Puuh, I´m glad. 
+    Player: There you go!
+    <<animation Tree(Clone) Positive>>
+    <<expression TreeFace Friendly>>
+    Tree: Thanks, that´s kind of you.
+-> Apologize and give tissue as lemonades are your business
+    <<moodBoard EventSystem angry>>
+    <<save EventSystem prudence 10>>
+    Player: I am so sorry.
+    Player: Here. Take this tissue. 
+    Player: Are you going to be alright?
+    <<moodBoard EventSystem happy>>
+    <<animation Tree(Clone) Positive>>
+    <<expression TreeFace Friendly>>
+    Tree: Yes yes. Don´t worry. 
+    Hmm smart. You didn´t give them free lemonade because it could affect your business, right?
+===

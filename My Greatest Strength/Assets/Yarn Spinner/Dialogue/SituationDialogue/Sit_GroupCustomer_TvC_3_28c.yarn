@@ -1,0 +1,39 @@
+title: Sit_GroupCustomer_TvC_3
+tags: 
+colorID: 0
+position: -559,178
+---
+    //A group of customers
+A group of customers come to your stand. They look very confused. A lot of customers are around, too!
+You have to find a way of handling the crowd. 
+-> Choose a leader and ask them about the order.
+    <<save EventSystem teamwork 10>>
+    <<moodBoard EventSystem happy>>
+    Player: I am so happy to see a lot of customers here. One of you can take all the orders and tell me after. 
+    Everything works out perfectly. Everyone is happy. You prevented a big mess happening. Good job on the teamwork!
+-> Give them the glasses and pour it one by one.
+    <<save EventSystem curiosity 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Okay so everyone will get their lemonade very fast! Everyone gets a glass and you hold them up. I am going to pour the lemonade one by one. 
+    This was such a smart way of handling the situation! Well done.
+[[Sit_OtherCustomerConsequence_TvB_28]] 
+===
+title: Sit_OtherCustomerConsequence_TvB_28
+tags: 
+colorID: 0
+position: -247,384
+---
+    //Customer who needs other help
+That was great! You are a real problem solver.
+There is still a big crowd. You see customers pushing each other. Your customers struggle to get through with lemonades in their hands. What can you do?
+-> Ask everyone to get in one line on the right side and leave from the left.
+    <<save EventSystem teamwork 10>>
+    <<moodBoard EventSystem happy>>
+    Player: Okay everyone please lets all work together so we do not hurt each other. Make a line on the right side and leave after you get your juicy lemonadyy from the left.
+    Customers slowly start to organize themselves thanks to you. Wow!
+-> Warn the customers about this behaviour
+    <<save EventSystem bravery 10>>
+    <<moodBoard EventSystem angry>>
+    Player: I know it is sooo hot in here. But please be careful and do not push each other. That can be dangerous. Even for your lemonades!
+    Good job! Customers move more carefully after you warned them. That took a lot of courage. You are so brave.
+===
